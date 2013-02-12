@@ -173,14 +173,14 @@ common task easy.
 .. includecode:: code/docs/testkit/PlainWordSpec.scala#plain-spec
 
 The :class:`TestKit` contains an actor named :obj:`testActor` which is the
-entry point for messages to be examined with the various ``expectMsg...``
-assertions detailed below. When mixing in the trait ``ImplicitSender`` this
-test actor is implicitly used as sender reference when dispatching messages
-from the test procedure. The :obj:`testActor` may also be passed to
-other actors as usual, usually subscribing it as notification listener. There
-is a whole set of examination methods, e.g. receiving all consecutive messages
-matching certain criteria, receiving a whole sequence of fixed messages or
-classes, receiving nothing for some time, etc.
+entry point for messages to be examined with the various assertions detailed
+below. When mixing in the trait ``ImplicitSender`` this test actor is
+implicitly used as sender reference when dispatching messages from the test
+procedure. The :obj:`testActor` may also be passed to other actors as usual,
+usually subscribing it as notification listener. There is a whole set of
+examination methods, e.g. receiving all consecutive messages matching certain
+criteria, receiving a whole sequence of fixed messages or classes, receiving
+nothing for some time, etc.
 
 The ActorSystem passed in to the constructor of TestKit is accessible via the
 :obj:`system` member.  Remember to shut down the actor system after the test is
